@@ -3,6 +3,7 @@ import "./App.css";
 import HomeCarousel from "./component/common/HomeCarousel";
 import MainLayout from "./component/common/MainLayout";
 import HomePage from "./component/home/HomePage";
+import ShopPage from "./component/shop/ShopPage";
 
 function App() {
   return (
@@ -16,7 +17,14 @@ function App() {
             </MainLayout>
           }
         />
-        <Route path="/shop" element={<HomeCarousel />} />
+        <Route
+          path="/shop"
+          element={
+            <MainLayout>
+              <ShopPage />
+            </MainLayout>
+          }
+        />
       </Routes>
     </div>
   );
